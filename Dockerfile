@@ -1,0 +1,16 @@
+FROM python:3.12-slim
+
+WORKDIR /app
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY src/ src/
+ENV PYTHONPATH=/app/src \
+    PYTHONUNBUFFERED=1 \
+    DB_PATH=/app/data/gold_tracker.db
+
+VOLUME ["/app/data"]
+
+ENTRYPOINT ["python", "-m", "gold_tracker"]
+CMD ["run"]
