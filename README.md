@@ -137,9 +137,6 @@ Tests use fake price sources and mocked HTTP calls, so they run offline and neve
 ## Roadmap
 
 - [ ] Percentage-drop alerts (e.g. "notify me if it falls 2% in a day")
-- [ ] More instruments (çeyrek altın, USD/TRY)
-- [ ] Telegram notifier
-- [ ] Small web page to manage subscriptions
 
 ## License
 
